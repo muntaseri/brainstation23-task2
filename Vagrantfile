@@ -1,4 +1,12 @@
-IMAGE_NAME = "bento/ubuntu-16.04"
+#IMAGE_NAME = "bento/ubuntu-16.04"
+IMAGE_NAME = "tknerr/baseimage-ubuntu-16.04"
+
+#Vagrant.configure("2") do |config|
+#    config.vm.box = "tknerr/baseimage-ubuntu-16.04"
+#    config.vm.box_version = "1.0.0"
+#  end
+
+
 N = 2
 
 Vagrant.configure("2") do |config|
