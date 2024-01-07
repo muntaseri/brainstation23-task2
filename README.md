@@ -23,6 +23,32 @@ Step 2: Create an Ansible playbook for Kubernetes master.
 Create a directory named kubernetes-setup in the same directory as the Vagrantfile. Create two files named master-playbook.yml and node-playbook.yml in the directory kubernetes-setup.
 
 
+Step 2.1: Install Docker and its dependent components
+We will be installing the following packages, and then adding a user named “vagrant” to the “docker” group.
+
+docker-ce
+docker-ce-cli
+containerd.io
+
+
+check docker-install.yml
+
+
+Step 2.2: Kubelet will not start if the system has swap enabled, so we are disabling swap using the below code.
+check swap-off.yml
+
+
+
+Step 2.3: Installing kubelet, kubeadm and kubectl using the below code.
+
+
+
+
+
+
+
+
+
 Step 3: Power up vagrant 
 
 $ vagrant up
